@@ -1,6 +1,5 @@
 #include <algorithm> // find_if()
 #include <cctype>    // isspace()
-#include <iostream>
 #include <string>
 #include <vector>
 
