@@ -3,6 +3,7 @@
 #include <cstdlib>   // rand()
 #include <stdexcept> // domain_error, ...
 
+#include <fstream> // 에런 (파일을 사용하기 위해)
 #include <iostream>
 #include <vector>
 #include <string>
@@ -23,8 +24,10 @@ Grammar read_grammar(istream& in) {
 	Grammar ret;
 	string line;
 
+	ifstream grammar_file("grammar-input.txt"); // 에런
+
 	// 입력 데이터를 읽음
-	while (getline(in, line)) {
+	while (getline(grammar_file, line)) {
 		// 입력 데이터를 단어로 나눔
 		vector<string> entry = split(line);
 		if (!entry.empty()) {
